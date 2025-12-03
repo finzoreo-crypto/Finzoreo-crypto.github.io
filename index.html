@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEBULA: [Nama Anda] - Desainer Web</title>
+    <style>
+        /* CSS Dasar untuk Tema Sci-Fi/Glitch */
+        body {
+            background-color: #0d0d0d; /* Hitam Arang */
+            color: #00ff99; /* Neon Hijau Limau */
+            font-family: 'Consolas', 'Monospace', monospace;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #00ccff; /* Neon Biru */
+            text-shadow: 0 0 5px #00ccff, 0 0 10px #00ffff; /* Efek Neon */
+            animation: glitch 1s infinite alternate; /* Animasi Glitch */
+        }
+        /* Definisi Animasi Glitch (Sederhana) */
+        @keyframes glitch {
+            0% { transform: skew(0deg); text-shadow: 2px 2px #ff0077, -2px -2px #00ffff; }
+            50% { transform: skew(1deg, -1deg); text-shadow: -2px 2px #ff0077, 2px -2px #00ffff; }
+            100% { transform: skew(0deg); text-shadow: 2px 2px #ff0077, -2px -2px #00ffff; }
+        }
+        .section-header {
+            color: #ff0077; /* Neon Magenta */
+            border-bottom: 2px solid #ff0077;
+            padding-bottom: 5px;
+            margin-top: 40px;
+            text-transform: uppercase;
+        }
+        .data-matrix {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+            border: 1px solid #00ff99;
+            padding: 10px;
+        }
+        .terminal-output {
+            background-color: #050505;
+            padding: 20px;
+            border: 1px solid #00ccff;
+        }
+        .prompt {
+            color: #00ff99;
+        }
+        .input-line {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .input-line input[type="text"], .input-line textarea {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #00ff99;
+            color: #fff;
+            padding: 2px;
+            flex-grow: 1;
+        }
+        button {
+            background-color: #ff0077;
+            color: #0d0d0d;
+            border: none;
+            padding: 5px 15px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="home">
+        <h1>[NAMA ANDA]: WEB DESIGNER</h1>
+        <p>// TRANSMISI DATA DIMULAI. SELAMAT DATANG DI ANTARMUKA PERSONAL.</p>
+        <nav>
+            <a href="#about" style="color: #00ccff;">//INFO</a> |
+            <a href="#skills" style="color: #00ccff;">//DATA</a> |
+            <a href="#contact" style="color: #00ccff;">//CONTACT</a>
+        </nav>
+    </header>
+
+    <hr style="border-color: #00ff99; margin: 30px 0;">
+
+    <section id="about">
+        <h2 class="section-header">// INFO :: BIODATA DIGITAL</h2>
+        <pre>
+            STATUS:           ONLINE / AKTIF
+            LOKASI:           [KOTA ANDA] / SEKTOR DESAIN
+            DATA_PRIORITAS:   INP_SEKUNDER
+            > DATA INPUT_SEKUNDER: Sekolah Menengah Pertama (SMP) Mangunan.
+            > NARASI: Menterjemahkan konsep non-linear menjadi antarmuka visual yang terstruktur.
+        </pre>
+    </section>
+
+    <hr style="border-color: #00ff99; margin: 30px 0;">
+
+    <section id="projects">
+        <h2 class="section-header">// PROJECTS :: LOG ENTRI HOBI</h2>
+        
+        <div style="border: 1px solid #ff0077; padding: 15px; margin-bottom: 20px;">
+            <p style="color: #ff0077;">[HIGH-PRIORITY INITIATIVE]</p>
+            <h3>Garena Delta Force</h3>
+            <p>Tipe: Simulasi/Realitas Virtual (Game)</p>
+            <p>Deskripsi: Analisis Lingkungan Digital. Implementasi Taktik & Kolaborasi Tim.</p>
+        </div>
+        </section>
+
+    <hr style="border-color: #00ff99; margin: 30px 0;">
+
+    <section id="skills">
+        <h2 class="section-header">// DATA :: MATRIKS KETERAMPILAN</h2>
+        <div class="data-matrix">
+            <b style="color: #ffaa00;">KATEGORI</b>
+            <b style="color: #ffaa00;">SKILL</b>
+            <b style="color: #ffaa00;">PERSENTASE (DEC)</b>
+            <b style="color: #ffaa00;">DATA HEX</b>
+
+            <span>DESIGN</span>
+            <span>Figma</span>
+            <span>90%</span>
+            <span>0x5A</span>
+
+            <span>FRONTEND</span>
+            <span>HTML/CSS</span>
+            <span>95%</span>
+            <span>0x5F</span>
+
+            <span>FRONTEND</span>
+            <span>JavaScript</span>
+            <span>80%</span>
+            <span>0x50</span>
+        </div>
+        <p style="font-size: 0.8em; margin-top: 10px;">// DATA REFRESH RATE: 0.1ms</p>
+    </section>
+
+    <hr style="border-color: #00ff99; margin: 30px 0;">
+
+    <section id="contact">
+        <h2 class="section-header">// CONTACT :: KIRIM TRANSMISI</h2>
+        <div class="terminal-output">
+            <p class="prompt">USER@NEBULA-PORTFOLIO:~$</p>
+            
+            <form onsubmit="alert('TRANSMISSION SUCCESSFUL. RECEIPT CODE: 746F6B6F.'); return false;">
+                <div class="input-line">
+                    <span class="prompt">input -user </span>
+                    <input type="text" placeholder="[type name]" required>
+                </div>
+                <div class="input-line">
+                    <span class="prompt">input -email </span>
+                    <input type="text" placeholder="[type email]" required>
+                </div>
+                <div class="input-line" style="flex-direction: column;">
+                    <span class="prompt">message -content:</span>
+                    <textarea rows="4" placeholder="[type message content]" required></textarea>
+                </div>
+                
+                <button type="submit">run -execute send_transmission</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
