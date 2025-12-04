@@ -1,201 +1,207 @@
-+<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> JB Jurasik Biru</title>
+<title>JB Jurasik Biru</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: 'Trebuchet MS', sans-serif;
-        background: #0e0e0e;
-        color: #f1f1f1;
-    }
+    body {
+        margin: 0;
+        font-family: 'Trebuchet MS', sans-serif;
+        background: #0e0e0e;
+        color: #f1f1f1;
+    }
 
-    nav {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        padding: 20px;
-        background: #111;
-        border-bottom: 2px solid #b30000;
-        position: sticky;
-        top: 0;
-        z-index: 999;
-    }
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 20px;
+        background: #111;
+        border-bottom: 2px solid #b30000;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
 
-    nav a {
-        color: #ffcc00;
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: bold;
-        letter-spacing: 1px;
-    }
+    nav a {
+        color: #ffcc00;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
 
-    section {
-        padding: 80px 20px;
-        text-align: center;
-        min-height: 100vh;
-    }
+    section {
+        padding: 80px 20px;
+        text-align: center;
+        min-height: 100vh;
+    }
 
-    /* HOME – Logo Jurassic Park bergetar */
-    #home img {
-        width: 300px;
-        animation: shake 0.5s infinite;
-        filter: drop-shadow(0 0 10px red);
-    }
+    /* HOME – Logo Jurassic Park bergetar */
+    #home img {
+        width: 300px;
+        animation: shake 0.5s infinite;
+        filter: drop-shadow(0 0 10px red);
+    }
 
-    @keyframes shake {
-        0% { transform: translate(0); }
-        25% { transform: translate(2px, -2px); }
-        50% { transform: translate(-2px, 2px); }
-        75% { transform: translate(2px, 2px); }
-        100% { transform: translate(0); }
-    }
+    @keyframes shake {
+        0% { transform: translate(0); }
+        25% { transform: translate(2px, -2px); }
+        50% { transform: translate(-2px, 2px); }
+        75% { transform: translate(2px, 2px); }
+        100% { transform: translate(0); }
+    }
 
-    /* ABOUT – File Penelitian */
-    .file-box {
-        background: #222;
-        padding: 30px;
-        width: 70%;
-        margin: auto;
-        border-left: 6px solid #ffcc00;
-        border-right: 6px solid #ff0000;
-        font-size: 18px;
-        text-align: left;
-    }
+    /* ABOUT – File Penelitian */
+    .file-box {
+        background: #222;
+        padding: 30px;
+        width: 70%;
+        margin: auto;
+        border-left: 6px solid #ffcc00;
+        border-right: 6px solid #ff0000;
+        font-size: 18px;
+        text-align: left;
+    }
 
-    /* HOBBY – dinosaurus favorit */
-    .dino-name {
-        font-size: 40px;
-        color: #ff4444;
-        text-shadow: 0 0 10px red;
-        margin-top: 20px;
-    }
+    /* HOBBY – dinosaurus favorit */
+    .dino-name {
+        font-size: 40px;
+        color: #ff4444;
+        text-shadow: 0 0 10px red;
+        margin-top: 20px;
+    }
 
-    /* SKILL – Timeline Evolusi */
-    .timeline {
-        width: 80%;
-        margin: auto;
-        border-left: 4px solid #ffcc00;
-        padding-left: 20px;
-    }
+    /* SKILL – Timeline Evolusi */
+    .timeline {
+        width: 80%;
+        margin: auto;
+        border-left: 4px solid #ffcc00;
+        padding-left: 20px;
+    }
 
-    .event {
-        margin-bottom: 30px;
-        text-align: left;
-    }
+    .event {
+        margin-bottom: 30px;
+        text-align: left;
+    }
 
-    .event h3 {
-        margin: 0;
-        color: #ffcc00;
-    }
+    .event h3 {
+        margin: 0;
+        color: #ffcc00;
+    }
 
-    /* CONTACT – Radio komunikasi kuno */
-    .radio-box {
-        background: #1a1a1a;
-        width: 60%;
-        margin: auto;
-        padding: 30px;
-        border: 2px dashed #999;
-    }
+    /* CONTACT - Desain Baru untuk WhatsApp */
+    .whatsapp-box {
+        background: #1a1a1a;
+        width: 60%;
+        margin: auto;
+        padding: 40px 30px;
+        border: 4px solid #00ff44; /* Hijau WhatsApp */
+        box-shadow: 0 0 20px #00ff44;
+        border-radius: 10px;
+    }
 
-    .radio-box input, .radio-box textarea {
-        width: 90%;
-        padding: 10px;
-        background: #000;
-        color: #0f0;
-        border: 1px solid #444;
-        font-family: "Courier New";
-    }
+    .whatsapp-button {
+        display: inline-block;
+        padding: 15px 30px;
+        background: #25D366; /* Warna WhatsApp resmi */
+        border: none;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 50px;
+        margin-top: 20px;
+        transition: background 0.3s, transform 0.3s;
+    }
 
-    button {
-        padding: 10px 25px;
-        background: #b30000;
-        border: none;
-        color: white;
-        font-size: 18px;
-        cursor: pointer;
-        margin-top: 20px;
-    }
+    .whatsapp-button:hover {
+        background: #128C7E;
+        transform: scale(1.05);
+    }
+
+    button { /* Tetap pertahankan style button lama untuk jaga-jaga, walau tidak dipakai di contact baru */
+        padding: 10px 25px;
+        background: #b30000;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
 
 </style>
 </head>
 <body>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About Me</a>
-    <a href="# Favorite">Favorite</a>
-    <a href="#TIME">Time</a>
-    <a href="#contact">Contact Me</a>
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#favorite">Favorite</a>
+    <a href="#TIME">Time</a>
+    <a href="#contact">Contact Me</a>
 </nav>
 
-<!-- HOME -->
 <section id="home">
-    <img src="Jurassic_Park_logo.png" alt="Jurassic Park Logo">
-    <h1>             SELAMAT DATANG DI Jurassic world    </h1>                       
+    <img src="Jurassic_Park_logo.png" alt="Jurassic Park Logo">
+    <h1>SELAMAT DATANG DI Jurassic world</h1>
 </section>
 
-<!-- ABOUT ME -->
 <section id="about">
-    <h1>📁 File Perkenalan</h1>
-    <div class="file-box">
-        <p><b>Nama:</b> BIRU MUSA INDRAKILA. UMUR 12 .TINGGAL DI YOKYAKARTA,dekat dengan candi sambisari, sekolah di smpe mangunan</p>
-        <p><b>Spesialisasi:</b>PENGEN JADI DINOSAURUS, EXPLORE HUTAN,</p>
-        <p><b>Catatan:</b>DINOSAURUS UDAH PUNAH.</p>
-    </div>
+    <h1>📁 File Perkenalan</h1>
+    <div class="file-box">
+        <p><b>Nama:</b> BIRU MUSA INDRAKILA. UMUR 12 .TINGGAL DI YOKYAKARTA, dekat dengan candi sambisari, sekolah di smpe mangunan</p>
+        <p><b>Spesialisasi:</b> PENGEN JADI DINOSAURUS, EXPLORE HUTAN,</p>
+        <p><b>Catatan:</b> DINOSAURUS UDAH PUNAH.</p>
+    </div>
 </section>
 
-<!-- Favorite -->
 <section id="favorite">
-    <h1>🦕 Dinosaurus Favorite Saya</h1>
-    <div class="dino-name">
-        <img src="dino_1-removebg-preview.png" width="470"><br/>Tyrannosaurus rex
-            </div>
-    <div class="dino-name">
-            <img src="AlloRenderDominion-removebg-preview.png"><br/> Allosaurus </div>
-    <div class="dino-name">
-        <img src="Dilophosaurus_Rebirth_Render-removebg-preview.png"><br/> Dilophosaurus </div>
-    <div class="dino-name">
-        <img src="jw__fallen_kingdom___carnotaurus_transparent_v2_by_lukiethewesley13_dhmp07v-pre-removebg-preview.png"><br/> Carnotaurus </div>
-    <div class="dino-name">
-        <img src="if-the-spinosaurus-from-jurassic-park-3-was-accurate-would-v0-qwmyvgpxsufc1-removebg-preview (1).png " width="470"><br/> Spinosaurus </div>
-                    
-                           
+    <h1>🦕 Dinosaurus Favorite Saya</h1>
+    <div class="dino-name">
+        <img src="dino_1-removebg-preview.png" width="470"><br/>Tyrannosaurus rex
+    </div>
+    <div class="dino-name">
+        <img src="AlloRenderDominion-removebg-preview.png"><br/> Allosaurus </div>
+    <div class="dino-name">
+        <img src="Dilophosaurus_Rebirth_Render-removebg-preview.png"><br/> Dilophosaurus </div>
+    <div class="dino-name">
+        <img src="jw__fallen_kingdom___carnotaurus_transparent_v2_by_lukiethewesley13_dhmp07v-pre-removebg-preview.png"><br/> Carnotaurus </div>
+    <div class="dino-name">
+        <img src="if-the-spinosaurus-from-jurassic-park-3-was-accurate-would-v0-qwmyvgpxsufc1-removebg-preview (1).png " width="470"><br/> Spinosaurus </div>
 </section>
 
-     
+
 <section id="TIME">
-    <h1>🧬 Peta Evolusi</h1>
-    <div class="timeline">
-        <div class="event">
-            <h3>Triassic Period</h3>
-            <p>Kemunculan awal dinosaurus, yang berukuran kecil di hantui dengan bayang bayang dinosaurus besar.</p>
-        </div>
-        <div class="event">
-            <h3>Jurassic Period</h3>
-            <p>masa ini adalah Masa kejayaan besar spesies raksasa, dam donosaurus mendominasi darat dan laut,dan menjadi predator 
-                di puncak klasemen.</p>
-        </div>
-        <div class="event">
-            <h3>Cretaceous Period </h3>
-            <p>Puncak keberagaman dan kejayaan dinosaurus benua benua terpisa .sebelum kepunahan massal.</p>
-        </div>
-    </div>
+    <h1>🧬 Peta Evolusi</h1>
+    <div class="timeline">
+        <div class="event">
+            <h3>Triassic Period</h3>
+            <p>Kemunculan awal dinosaurus, yang berukuran kecil di hantui dengan bayang bayang dinosaurus besar.</p>
+        </div>
+        <div class="event">
+            <h3>Jurassic Period</h3>
+            <p>Masa ini adalah Masa kejayaan besar spesies raksasa, dinosaurus mendominasi darat dan laut, dan menjadi predator di puncak klasemen.</p>
+        </div>
+        <div class="event">
+            <h3>Cretaceous Period </h3>
+            <p>Puncak keberagaman dan kejayaan dinosaurus. Benua-benua terpisah, sebelum kepunahan massal.</p>
+        </div>
+    </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
-    <h1>📡 Radio Komunikasi Kuno</h1>
-    <div class="radio-box">
-        <input type="text" placeholder="Panggilan Kode Anda..."><br><br>
-        <textarea rows="5" placeholder="Kirim pesan melalui radio..."></textarea><br>
-        <button>Kirim Sinyal</button>
-    </div>
+    <h1>📲 Panggil Operasi Lapangan</h1>
+    <p>Untuk koordinasi atau pertanyaan tentang penemuan terbaru, hubungi saya langsung.</p>
+    <div class="whatsapp-box">
+        <p><b>Kode Akses:</b> BIRU INDRAKILA</p>
+        <a href="https://wa.me/6285291837938?text=Salam%20dari%20Jurassic%20World!%20Saya%20ingin%20berbicara%20tentang%20..." class="whatsapp-button" target="_blank">
+            🟢 Hubungi via WhatsApp
+        </a>
+    </div>
 </section>
 
 </body>
 </html>
-</div>     Email saya:finzoreo@gmail.com
